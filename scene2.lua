@@ -8,7 +8,7 @@ local scene = storyboard.newScene()
 -- A timer for timed scene change
 local timer_fade
 local function _onSplashTimeout()
-	storyboard.gotoScene("scene1", "bubbles", 1000)
+	storyboard.gotoScene("scene1", "bubbles", 1500)
 	return true
 end
 

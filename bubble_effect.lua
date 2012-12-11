@@ -3,7 +3,7 @@
 local storyboard = require("storyboard")
 
 -- Load our bubble textures
-local bubble_sheet = graphics.newImageSheet("bubble.png", {width = 64, height = 64, numFrames = 5, })
+local bubble_sheet = graphics.newImageSheet("bubble.png", {width = 40, height = 40, numFrames = 5, })
 
 -- Add a new effect to storyboard (copy of the slideUp transition, with modifications)
 storyboard.effectList.bubbles = {
@@ -26,7 +26,7 @@ storyboard.effectList.bubbles = {
 				_sprite:play()
 
 				-- Float the bubble up and destroy it
-				transition.to(_sprite, {time = math.random(tMax / 2, tMax), y = -64, onComplete = function(obj)
+				transition.to(_sprite, {time = math.random(tMax / 2, tMax), y = -40, onComplete = function(obj)
 					obj:removeSelf()
 				end, })
 			end
